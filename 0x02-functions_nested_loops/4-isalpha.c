@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * _isalpa - checks if the char is a letter or not
+ * _isalpha - checks if the char is a letter or not
  * @c: the char we want to chick
  * Return: 1 if char, 0 if not
  */
