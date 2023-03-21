@@ -1,17 +1,12 @@
 #include <stdio.h>
 
-
-	/**
-	 * main - fibonacci <3
-	 *
-	 * Purpose - no hardcode
-	 *
-	 * Return:  (Success)
-	 */
-
-
+/**
+ * main - ay habal fel gabal
+ * Return: always zero
+ */
 	int main(void)
 	{
+
 		unsigned long int i;
 		unsigned long int bef = 1;
 		unsigned long int aft = 2;
@@ -48,6 +43,7 @@
 			aft2 = aft2 + bef2;
 			bef2 = aft2 - bef2;
 		}
+
 		printf("\n");
 		return (0);
 	}
