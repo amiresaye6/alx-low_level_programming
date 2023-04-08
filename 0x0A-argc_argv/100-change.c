@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 			{
 				l += num / coins[i];
 				num %= coins[i];
-				if (num %coins[i] == 0)
+				if (num % coins[i] == 0)
 				{
 					break;
 				}
