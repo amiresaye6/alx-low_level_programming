@@ -1,0 +1,50 @@
+#include "main.h"
+
+/**
+ * argstostr - a function that concatenates all the arguments of your
+ * program.
+ * @ac: int
+ * @av: char
+ * Return: pointer or null
+ */
+
+char *argstostr(int ac, char **av)
+{
+	int i = 0, n = 0, j = 0, c = 0;
+	char *ptr;
+
+	if (ac == 0 || av == NULL)
+		return (NULL);
+	for (; i < ac; i++, n++)
+		n += _strlen(av[i]);
+	ptr = malloc(sizeof(char) * n + 1);
+	if (ptr == NULL)
+		return (NULL);
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j] != '\0'; j++, c++)
+		{
+			ptr[c] = av[i][j];
+		}
+		ptr[c] = '\0';
+		c++;
+	}
+	ptr[c] = '\0';
+	return (ptr);
+}
+
+/**
+ * _strlen - length
+ * @l: str
+ * Return: intger
+ */
+int _strlen(char *l)
+{
+	int s = 0;
+
+	while (l[s])
+	{
+		s++;
+	}
+	return (s);
+}
