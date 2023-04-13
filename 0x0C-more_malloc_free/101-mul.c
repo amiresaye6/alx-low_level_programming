@@ -1,11 +1,11 @@
 #include "main.h"
 
 /**
- * puts - puts
+ * putss - puts
  * @str: str
  * Return: void
  */
-void puts(char *str)
+void putss(char *str)
 {
 	int i = 0;
 
@@ -68,7 +68,7 @@ int main(int argc, char const *argv[])
 
 	if (argc != 3)
 	{
-		puts("Error ");
+		putss("Error ");
 		exit(98);
 	}
 	print(atoi(argv[1]) * atoi(argv[2]));
