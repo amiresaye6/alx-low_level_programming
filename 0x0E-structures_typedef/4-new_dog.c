@@ -1,4 +1,5 @@
 #include "dog.h"
+#include <stdlib.h>
 
 /**
  * lnstr - calculate the length of a string
@@ -6,7 +7,7 @@
  * Return: int
  */
 
-int lnstr(const cahr *str)
+int lnstr(const char *str)
 {
 	int res = 0;
 
