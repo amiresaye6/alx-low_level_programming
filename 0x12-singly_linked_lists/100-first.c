@@ -3,7 +3,6 @@
 void _constructor(void) __attribute__ ((constructor));
 
 /**
- *
  * _constructor - exculted before the main function
  *
  * Return: void
