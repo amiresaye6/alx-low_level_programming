@@ -1,7 +1,7 @@
 #include "lists.h"
 
 /**
- * find_list_loop - finds loop in list
+ * find_listint_loop - finds loop in list
  *
  * @head: pointer to head
  *
