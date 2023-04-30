@@ -1,65 +1,32 @@
 #include "lists.h"
 
 /**
- * find - finds a loop in linked lists
- *
- * @head: head pointer
- *
- * Return: address of start node, null
- */
-
-listint_t *find(listint_t *head)
-{
-	listint_t *p, *e;
-
-	if (!head)
-		return (NULL);
-	for (e = head->next; e; e = e->next)
-	{
-		if (e == e->next)
-			return (e);
-		for (p = head; p; p = p->next)
-			if (p == e->next)
-				return (e->next);
-	}
-	return (NULL);
-}
-
-/**
  * free_listint_safe - a function that frees a listint_t list.
  *
  * @h: head pointer
  *
- * Return: sixe of the list
+ * Return: size of the list
  */
 
 size_t free_listint_safe(listint_t **h)
 {
-	listint_t *nextn, *loopn;
-	size_t size;
-	int loop = 1;
+	listint_t *s, *f, *free_;
+	size_t len = 0;
 
 	if (!h || !*h)
 		return (0);
-	loopn = find(*h);
-	for (size = 0; (*h != loopn || loop) && *h != NULL; *h = nextn)
+	f = (*h)->next;
+	s = *h;
+	while (f && f < s)
 	{
-		size++;
-		nextn = (*h)->next;
-		if (*h == loopn && loop)
-		{
-			if (loopn == loopn->next)
-			{
-				free(*h);
-				break;
-			}
-			size++;
-			nextn = nextn->next;
-			free((*h)->next);
-			loopn = 0;
-		}
-		free(*h);
+		free_ = s;
+		f = f->next;
+		s = s->next;
+		len++;
+		free(free_);
 	}
+	len++;
+	free(s);
 	*h = NULL;
-	return (size);
+	return (len);
 }
