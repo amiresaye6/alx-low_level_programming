@@ -17,7 +17,7 @@ const listint_t **_ref(const listint_t **l, size_t num, const listint_t *n)
 	if (!new)
 	{
 		free(l);
-		exit (98);
+		exit(98);
 	}
 	while (i < num - 1)
 	{
