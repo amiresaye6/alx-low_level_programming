@@ -13,10 +13,6 @@ int main(void)
 	hash_table_t *ht;
 
 	ht = hash_table_create(1024);
-	hash_table_set(ht, "collides", "cool");
-	hash_table_set(ht, "neurospora", "test");
-	hash_table_set(ht, "amir", "my name is amir alsayed");
-
-
+	hash_table_set(ht, "betty", "cool");
 	return (EXIT_SUCCESS);
 }
