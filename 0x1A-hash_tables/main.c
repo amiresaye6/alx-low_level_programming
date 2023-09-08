@@ -10,13 +10,13 @@
  */
 int main(void)
 {
-    hash_table_t *ht;
+	hash_table_t *ht;
 
-    ht = hash_table_create(1024);
-    hash_table_set(ht, "collides", "cool");
-    hash_table_set(ht, "neurospora", "test");
-    hash_table_set(ht, "amir", "my name is amir alsayed");
-    
+	ht = hash_table_create(1024);
+	hash_table_set(ht, "collides", "cool");
+	hash_table_set(ht, "neurospora", "test");
+	hash_table_set(ht, "amir", "my name is amir alsayed");
 
-    return (EXIT_SUCCESS);
+
+	return (EXIT_SUCCESS);
 }
