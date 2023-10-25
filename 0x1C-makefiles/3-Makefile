@@ -4,13 +4,11 @@
 CC = gcc
 
 # Source files
-SRC = main.c school.c file1.c file2.c
+SRC = main.c school.c
 
 # Object files (automatically generated from source files)
 OBJ = $(SRC:.c=.o)
 
-# favorite compiler flags
-CFLAGS: -Wall -Werror -Wextra -pedantic
 # Executable name
 NAME = school
 
@@ -22,7 +20,7 @@ all: $(NAME)
 
 # Rule to build the executable
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
 # Rule to compile source files into object files
 %.o: %.c

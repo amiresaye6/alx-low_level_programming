@@ -4,7 +4,7 @@
 CC = gcc
 
 # Source files
-SRC = main.c school.c file1.c file2.c
+SRC = main.c school.c
 
 # Object files (automatically generated from source files)
 OBJ = $(SRC:.c=.o)
