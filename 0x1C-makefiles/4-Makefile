@@ -3,14 +3,14 @@
 # Compiler
 CC = gcc
 
+# Favorite compiler flags
+CFLAGS = -Wall -Werror -Wextra -pedantic
+
 # Source files
-SRC = main.c school.c
+SRC = main.c school.c file1.c file2.c
 
 # Object files (automatically generated from source files)
 OBJ = $(SRC:.c=.o)
-
-# favorite compiler flags
-CFLAGS: -Wall -Werror -Wextra -pedantic
 
 # Executable name
 NAME = school
