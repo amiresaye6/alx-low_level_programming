@@ -1,19 +1,26 @@
-#include <stdlib.h>
-#include <string.h>
 #include <stdio.h>
-#include "hash_tables.h"
+#include <stdlib.h>
+#include <stdbool.h>
 
-/**
- * main - check the code
- *
- * Return: Always EXIT_SUCCESS.
- */
-int main(void)
+void isPalindrome(int x)
 {
-    hash_table_t *ht;
+    int array[50];
+    unsigned long int i = 1, j = 1, index = 0;
+    while (x % j != x)
+        j *= 10;
+    j /= 10;
+    while (i < j)
+    {
+        array[index] = (int)(x % i) / i;
+        i *= 10;
+    }
+    for (index = 0; array[index]; index++)
+        printf("%d\n", array[index]);
 
-    ht = hash_table_create(1024);
-    hash_table_set(ht, "betty", "cool");
-    hash_table_print(ht);
-    return (EXIT_SUCCESS);
+}
+void main()
+{
+    int num = 10256565;
+    isPalindrome(num);
+    printf("hadsalfkj;kkk;k;k;k;k;k;k;k;k;k;k;j;\n");
 }
