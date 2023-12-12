@@ -1,8 +1,8 @@
 #include "search_algos.h"
 #include <math.h>
 /**
- * binary_search - searches for a value in an array of integers using
- * the Binary search algorithm
+ * jump_search - searches for a value in an array of integers using
+ * the Jump search algorithm
  *
  * @array: pointer to the first elment (int)
  * @size: the size of this array (size_t)
@@ -19,10 +19,10 @@ int jump_search(int *array, size_t size, int value)
 	{
 		for (high = 0; high < size; high += jump)
 		{
-			if (value < array[high] && value > array[low])
+			if (value <= array[high] && value >= array[low])
 			{
 				printf("Value found between indexes [%ld] and [%ld]\n", low, high);
-				for (temp = low; temp < high; temp++)
+				for (temp = low; temp <= high; temp++)
 				{
 					printf("Value checked array[%ld] = [%d]\n", temp, array[temp]);
 					if (array[temp] == value)
@@ -35,7 +35,8 @@ int jump_search(int *array, size_t size, int value)
 				{
 					low = high;
 					if (high + jump > size)
-						printf("Value found between indexes [%ld] and [%ld]\n", low, high + jump);
+						printf("Value found between indexes [%ld] and [%ld]\n",
+						low, high + jump);
 				}
 				else if (array[high] == value)
 					return (high);
