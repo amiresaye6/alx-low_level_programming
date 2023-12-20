@@ -21,5 +21,5 @@ The best search algorithm to use depends on the specific requirements of the pro
 - **Linear Search:** Suitable for small collections or unsorted data where simplicity is prioritized.
 - **Binary Search:** Ideal for large sorted collections where efficiency is crucial.
 
-Consider the nature of your data and the trade-offs between simplicity and efficiency when choosing the appropriate search algorithm for your needs.
+Consider the nature of your data and the trade-offs between simplicity and efficiency when choosing the appropriate search algorithm for your needs. see you soon in 30 dayes.
 
